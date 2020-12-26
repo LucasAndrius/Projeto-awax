@@ -1,14 +1,13 @@
 function menuOpened(){
-    document.getElementById('listNav').style.display = 'block';
+    let openMenu = document.getElementById('listNav');
+
+    if(openMenu.classList.contains('displayNav')==true){
+        openMenu.classList.remove('displayNav');
+    }else{
+        openMenu.classList.add('displayNav');
+    }
     
 }
-
-function menuClosed(){
-    document.getElementById('listNav').style.display = 'none';
-    
-}
-
-
 
 
 

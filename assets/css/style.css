@@ -897,8 +897,11 @@ footer{
 
     }
     
-    nav {
+    .displayNav {
         display:none;
+    }
+
+    nav {
         position: absolute;
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.9);
@@ -1005,8 +1008,11 @@ footer{
 
     }
     
-    nav {
+    .displayNav {
         display:none;
+    }
+
+    nav {
         position: absolute;
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.9);
