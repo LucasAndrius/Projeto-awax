@@ -59,6 +59,50 @@ document.querySelector('#contactUs').addEventListener('click', function(event){
 
 
 
+currentSlide = 0;
+
+
+let totalSlides = document.querySelectorAll('.slide--item').length;
+
+document.querySelector('.slider-width').style.width = `calc(100vw * ${totalSlides})`;
+
+document.querySelector('.slider--controls').style.height = 
+    `${document.querySelector('.slider-width').clientHeight}px`;
+
+
+
+
+function goPrev(){
+    currentSlide--;
+    if(currentSlide < 0){
+        currentSlide = totalSlides -1;
+    }
+
+    updateMargin();
+}
+
+
+function goNext(){
+    currentSlide++;
+    if(currentSlide > (totalSlides -1)) {
+        currentSlide = 0;
+    }
+    updateMargin();
+}
+
+
+function updateMargin(){
+    let sliderItemWidth = document.querySelector('.slide--item').clientWidth;
+    let newMargin = (currentSlide * sliderItemWidth);
+    document.querySelector('.slider-width').style.marginLeft = 
+    `-${newMargin}px`
+}
+
+setInterval(goNext, 8500);
+
+
+
+
 
 
 window.onscroll = function(){

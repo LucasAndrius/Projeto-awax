@@ -83,47 +83,108 @@ header {
     padding:10px 30px;
     margin-top:30px;
     border-radius:20px;
-
+    
 }
 
-.banner {
-    
+.sliders{
     height:calc(100vh - 100px);
-    background-color:#333;
-    background-image: url('../images/bg.jpg');
-    background-size: cover;  
-    background-position:bottom;  
+    flex:1;
     overflow:hidden;
-}
-/*Para realizar o slide*/
-.banner .sliders {
-    width:1000vw;
-    height:100%;
+    background-color: rgba(0, 0, 0, 0.9);
     
 }
 
-.banner .slide {
-    width:100vw;
+.slider-width {
     height:100%;
-    display:inline-block;
-    background-color: rgba(0, 0, 0, 0.7);
+    display:flex;
+    transition: all ease 0.6s;
 }
-.banner .slidearea {
+
+.slide--item{
+    width: 100vw;
+    height:inherit;
+    background-position:center;
+    background-size:cover;
+}
+
+.slider--controls {
+    position:absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider--control{
+    background-color: #ccc;
+    border-radius:50%;
+    cursor: pointer;
+    
+}
+
+.controlPrev{
+    background-image: url('../images/left-arrow.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:transparent;
+    height:32px;
+    width:32px;
+    margin-left:10px;
+}
+.controlNext{
+    background-image: url('../images/right-arrow.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:transparent;
+    height:32px;
+    width:32px;
+    margin-right:10px;
+}
+
+
+.bgslide1{
+    background-image: url('../images/bg.png');
+    background-position:bottom;
+    
+}
+
+.bgslide2{
+    background-image: url('../images/bg2.jpg');
+    background-position:bottom;
+    
+}
+
+
+.bgslide3{
+    background-image: url('../images/bg3.jpg');
+    background-position:center;
+    
+}
+
+.slide--item{
+    
     display:flex;
     flex-direction:column;
-    height:100%;
     justify-content:center;
     align-items:center;
-    color:#FFF;
+    text-align:center;
 }
+
+
+
+
+
 .banner h1 {
     text-transform:uppercase;
     font-weight:bold;
     font-size:50px;
+    color:#fff;
 }
 .banner h2{
     text-transform:uppercase;
     margin-top:20px;
+    color:#fff;
 }
 
 .banner h1 span {
@@ -131,34 +192,12 @@ header {
 }
 
 
-.banner .sliders-pointers {
-    width:100vw;
-    height:20px;
-    position:absolute;
-    margin-top:-50px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.banner .pointer{
-    width:15px;
-    height:15px;
-    border:2px solid #b28756;
-    border-radius:8px;
-    margin-left:5px;
-    margin-right:5px;
-    cursor:pointer;
-}
-.banner .pointer.active {
-    background-color:#b28756;
-}
 
 #toUp{
     background-image:url('../images/up-arrow.png');
     background-size:cover;
-    width:40px;
-    height:40px;
+    width:35px;
+    height:35px;
     position:fixed;
     right:10px;
     bottom:10px;
@@ -167,6 +206,7 @@ header {
 
 html{
     scroll-behavior: smooth ;
+    background-color:#000000e6
 }
 
 .default{
@@ -547,6 +587,7 @@ html{
 .brand-logos{
     display:flex;
     justify-content:center;
+    background-color:#FFF;
     
 }
 .brand-logos img{
@@ -565,7 +606,7 @@ html{
 
 .options-prices div{
     padding:20px;
-    width:200px;
+    width:250px;
     text-align:center;
     font-size:13px;
     margin:20px;
@@ -635,26 +676,6 @@ html{
 
 
 
-.section-body .box-listpointers {
-    margin-top:30px;
-    height:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.box-listpointers .pointer{
-    width:15px;
-    height:15px;
-    border:2px solid #b28756;
-    border-radius:8px;
-    margin-left:5px;
-    margin-right:5px;
-    cursor:pointer;
-}
-.box-listpointers  .pointer.active {
-    background-color:#b28756;
-}
 
 .section-body-facts{
     display:flex;
@@ -687,20 +708,7 @@ html{
     color:#CCC;
 }
 
-.all-media{
-    margin:20px;
-}
 
-.media-all{
-    display:flex;
-    flex:1;
-    justify-content:center;
-    align-items:center;
-}
-
-.media-all div{
-    margin:20px;
-}
 
 
 .color {
