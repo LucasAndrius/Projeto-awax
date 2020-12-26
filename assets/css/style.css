@@ -131,6 +131,7 @@ header {
     height:32px;
     width:32px;
     margin-left:10px;
+    display:none;
 }
 .controlNext{
     background-image: url('../images/right-arrow.png');
@@ -140,13 +141,17 @@ header {
     height:32px;
     width:32px;
     margin-right:10px;
+    display:none;
+}
+
+.controlsDisplay{
+    display:block;
 }
 
 
 .bgslide1{
     background-image: url('../images/bg.png');
     background-position:bottom;
-    
 }
 
 .bgslide2{
@@ -905,6 +910,7 @@ footer{
 
     }
     
+
     .displayNav {
         display:none;
     }
@@ -931,6 +937,7 @@ footer{
         margin-left:50px;
         border:0;
         margin-top:-10px;
+        
     }
 
     .menu li.active a{
@@ -1013,15 +1020,16 @@ footer{
         display:block;
         width:40px;
         margin-right:30px;
-
+       
     }
     
     .displayNav {
         display:none;
+        
     }
 
     nav {
-        position: absolute;
+        position: absolute !important;
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.9);
         width: 80vw;
