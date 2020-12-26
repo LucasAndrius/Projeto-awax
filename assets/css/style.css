@@ -37,6 +37,7 @@ header {
 
 .menu-opner {
     display:none;
+    
 }
 
 .menu {
@@ -65,8 +66,6 @@ header {
     border-bottom:4px solid #000;
 }
 
-/* deixa pré-selecionado o link:a pois ele esta como
- ''active'', */
 .menu li a:hover,  
 .menu .active a{
     border-bottom:4px solid #b28756;
@@ -88,19 +87,12 @@ header {
 }
 
 .banner {
-    /*height: prenche toda a tela do usuário descontando a 
-    altura do logo que é 100px, deixando a tela full sem barra
-    de rolagem*/
+    
     height:calc(100vh - 100px);
     background-color:#333;
     background-image: url('../images/bg.jpg');
-    
-    /*ajustando imagem da foto*/
-    
-    background-size: cover;  /* ira cobrir corretamente o espaço*/
-    background-position:bottom;  /*prioriza a parte de baixo da imagem*/
-    
-    /* overflow, esconde tudo que esta dentro dele*/
+    background-size: cover;  
+    background-position:bottom;  
     overflow:hidden;
 }
 /*Para realizar o slide*/
@@ -113,7 +105,6 @@ header {
 .banner .slide {
     width:100vw;
     height:100%;
-    /*arrumando a configuração do slide*/
     display:inline-block;
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -139,12 +130,10 @@ header {
     color:#b28756
 }
 
-    /* pontos ficarão abaixo do banner*/
+
 .banner .sliders-pointers {
     width:100vw;
     height:20px;
-    
-    /*arrumando*/
     position:absolute;
     margin-top:-50px;
     display:flex;
@@ -163,6 +152,21 @@ header {
 }
 .banner .pointer.active {
     background-color:#b28756;
+}
+
+#toUp{
+    background-image:url('../images/up-arrow.png');
+    background-size:cover;
+    width:40px;
+    height:40px;
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    
+}
+
+html{
+    scroll-behavior: smooth ;
 }
 
 .default{
@@ -215,21 +219,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-CSS DE AREAS ESPECIFICAS
-*/
 
 .section-aboutus{
     display:flex;
@@ -329,26 +318,26 @@ CSS DE AREAS ESPECIFICAS
 
 
 .section-projects--photos {
-    width:100vw;       /* vai usar 100% da tela*/
-    max-width:1140px;  /*põe um limite de tela de 1140px*/
+    width:100vw;       
+    max-width:1140px;  
     margin-top:20px;
     display:flex;
-    flex-wrap:wrap; /* permite uma foto ao lado da outra, porem chegando no limite ele quebra a linha*/
+    flex-wrap:wrap;
     justify-content:center;
 }
 
 .section-projetcs--photo {
-    width:280px; /*tamanho que já cabe em celular*/
+    width:280px; 
 }
 
-.section-projects--photoarea { /*arrumando as todos quebradas*/
+.section-projects--photoarea { 
     margin:10px;
-    width:260px; /*para ficar ajustado considerando a margin*/
+    width:260px; 
     height:160px;
 }
 
 .section-projects--photoarea img {
-    width:inherit; /*vai endar os items acima*/
+    width:inherit;
     height:inherit;
 }
 
@@ -356,8 +345,7 @@ CSS DE AREAS ESPECIFICAS
     position:absolute;
     background-color:rgba(0, 0, 0, 0.5);
     width:inherit;
-    height:inherit;
-                        /*abaixo serviu para pode colocar os textos em ordem*/
+    height:inherit;  
     display:none;
     flex-direction: column;
     justify-content:center;
@@ -370,7 +358,7 @@ CSS DE AREAS ESPECIFICAS
     font-size:18px;
     font-weight:600;
 }
-/*vai dar o efeito de aparecer o ABOUT quando passar o mause em cima*/
+
 .section-projects--photoarea:hover .section-projects--photoinfo{
     display:flex;
 }
@@ -380,7 +368,7 @@ CSS DE AREAS ESPECIFICAS
     background-image:url('../images/bg.jpg');
     background-size:cover;
     background-position:center;
-    padding:0; /*zera o padding para a div preencher com o rgba mudando os padding para .sectionteam-area*/
+    padding:0;
 }
 
 
@@ -915,9 +903,11 @@ footer{
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.9);
         width: 70vw;
-        height: calc(100vw - 100px);
+        height: calc(100vh - 100px);
         top: 100px;
         right: 0;
+        
+        
     }
     
     .menu ul {
@@ -926,9 +916,10 @@ footer{
     .menu li a {
         font-weight:bold;
         height:70px;
-        font-size:25px;
+        font-size:24px;
         margin-left:50px;
         border:0;
+        margin-top:-10px;
     }
 
     .menu li.active a{
@@ -947,8 +938,6 @@ footer{
     }
 
     .section-aboutus--right{
-        /*já tinha largura definida colocando
-        auto se ajusta ao meio*/
         width:auto;
     }
 

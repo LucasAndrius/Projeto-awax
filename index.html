@@ -6,7 +6,6 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Awax</title>
-        <!--usar tag abaixo para responsividade-->
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600;700&display=swap" rel="stylesheet"/>
@@ -15,25 +14,26 @@
 
     <body>
         <header>
-                <!--Logo e Menu-->
+               
                 <div class="header">
                         <div class="logo">
                         <div class="logoimg"></div>
                         </div>
                     <div class="menu">
-                        <!--abaixo botão para responsividade-->
-                        <img  class="menu-opner"src="assets/images/menu.png">
-                        <nav>
+                      
+                        <img  class="menu-opner" id="open-menu" onclick="menuOpened()" onmouseout="menuClosed()" src="assets/images/menu.png"/>
+                        <nav id="listNav">
+                            
                             <ul>
                                 <li class="active"><a href="">Home</a></li>
-                                <li><a href="">About us</a></li>
-                                <li><a href="">Services</a></li>
-                                <li><a href="">Our Projects</a></li>
-                                <li><a href="">Our team</a></li>
-                                <li><a href="">Happy Clients</a></li>
-                                <li><a href="">Price</a></li>
-                                <li><a href="">Some Facts</a></li>
-                                <li><a href="">Contact Us</a></li>
+                                <li><a href="" id="About">About us</a></li>
+                                <li><a href="" id="Services">Services</a></li>
+                                <li><a href="" id="ourProjects">Our Projects</a></li>
+                                <li><a href="" id="ourTeam">Our team</a></li>
+                                <li><a href="" id="happyClients">Happy Clients</a></li>
+                                <li><a href="" id="price">Price</a></li>
+                                <li><a href="" id="someFacts">Some Facts</a></li>
+                                <li><a href="" id="contactUs">Contact Us</a></li>
                             
                             </ul>
                         </nav>
@@ -46,9 +46,7 @@
             <section class="banner">
                 
                 <div class="sliders"> 
-                    <!--tem que ter a largura 
-                    de pelo menos a quantidade de
-                    sliders que virão -->
+                    
                     
                     <div class="slide">
                         <div class="slidearea">
@@ -74,9 +72,12 @@
                   <div class="pointer"></div>
                 </div>
             </section>
+          
 
-            <section class="default light">
-                <div class="section-title">About us</div>
+            <section class="default light" id="receiverAbout">
+                
+                <div class="section-title" >About us</div>
+                
                 <div class="section-desc">Who we are?</div>
                 <div class="section-body">
                     <div class="section-aboutus">
@@ -87,13 +88,16 @@
                         </div>
                         <div class="section-aboutus--right">
                             <img src="media/foto9.jpg">
+                            
                         </div>
+                        
                     </div>
+                    <a href="" id="toUp" onclick="backToTop()"></a>
                 </div>
             </section>
 
 
-            <section class="default dark">
+            <section class="default dark" id="receiverServices">
                 <div class="section-title">Services</div>
                 <div class="section-desc">Services that we provide</div>
                 <div class="section-body">
@@ -128,7 +132,7 @@
             </section>
 
 
-            <section class="default light">
+            <section class="default light" id="receiverProjects">
                 <div class="section-title">Our projects</div>
                 <div class="section-desc">What we create</div>
                     <div class="section-body">
@@ -294,7 +298,7 @@
             </section>
 
 
-            <section class="default dark bg-team">
+            <section class="default dark bg-team" id="receiverTeam">
                 <div class="sectionteam-area">
                     <div class="section-title">Our Team</div>
                     <div class="section-desc">Our Co-Workers</div>
@@ -387,7 +391,7 @@
 
 
 
-            <section class="default light-clients">
+            <section class="default light-clients" id="receiverClients">
                 <div class="section-depoiment-area">
                     <div class="section-title">Happy Clients</div>
                     <div class="section-desc">Clients Reviews</div>
@@ -425,7 +429,7 @@
 
 
 
-            <section class="default light prices">
+            <section class="default light prices"id="receiverPrice">
                 <div class="section-title">Price</div>
                 <div class="section-desc">Princing Table</div>
                 <div class="section-body-price">
@@ -559,7 +563,7 @@
             </section>
 
 
-            <section class="default dark">
+            <section class="default dark" id="receiverFacts">
                 <div class="section-title">Some Facts</div>
                 <div class="section-desc">About our work</div>
                 <div class="section-body-facts">
@@ -612,20 +616,20 @@
         
             
 
-            <section class="default dark">
+            <section class="default dark" id="receiverContact">
                 <div class="section-title">Contact Us</div>
                 <div class="section-desc">Our agency located in melbourne, Australia</div>
                 <form class="section-body-form">
                     <div class="twoinput">
                         <div class="input">
-                            <input type="text" name="nome" value="NAME" required  >
-                            <input type="email" name="email" value="EMAIL"required >
+                            <input type="text" name="nome" placeholder="NAME" required  >
+                            <input type="email" name="email" placeholder="EMAIL"required >
                         </div>
                     
                     </div>
                     <div class="input2">
-                        <input type="text" name="nome" value="SUBJECT" required ><br><br>
-                        <input type="text" name="nome" value="MESSAGE" required><br><br>
+                        <input type="text" name="nome" placeholder="SUBJECT" required ><br><br>
+                        <input type="text" name="nome" placeholder="MESSAGE" required><br><br>
                         <a href="">Send Message</a>
                     </div>
                 </div>
@@ -715,7 +719,7 @@
                     
                     <div class="footer-submit">
                         <div>
-                            <input type="email" name="email" value="EMAIL TO SUBSCRIBE">
+                            <input type="email" name="email" placeholder="E-mail to subscribe">
                         </div>
                         <div class="border-email"></div>
                         <a href="">Subscribe</a>
@@ -723,6 +727,7 @@
                 </div>
             </footer>
         </main>
+        <script src="assets/js/script.js"></script>
     </body>
 
 </html>
