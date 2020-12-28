@@ -7,7 +7,6 @@ function menuOpened(){
         openMenu.classList.add('displayNav');
     }
 
-    
 } 
 
 
@@ -67,9 +66,9 @@ let totalSlides = document.querySelectorAll('.slide--item').length;
 
 document.querySelector('.slider-width').style.width = `calc(100vw * ${totalSlides})`;
 
-/*document.querySelector('.slider--controls').style.height = 
+document.querySelector('.slider--controls').style.height = 
     `${document.querySelector('.slider-width').clientHeight}px`;
-*/
+
 
 
 
