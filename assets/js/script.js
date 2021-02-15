@@ -15,7 +15,6 @@ function scrollTo(element){
     document.querySelector(element).scrollIntoView({behavior:'smooth'});
 }
 
-
 document.querySelector('#About').addEventListener('click', function(event){
     event.preventDefault();
     scrollTo('#receiverAbout');
@@ -85,7 +84,7 @@ function goPrev(){
 function goNext(){
     currentSlide++;
     if(currentSlide > (totalSlides -1)) {
-        currentSlide = 0;
+        currentSlide = 0 ;
     }
     updateMargin();
 }

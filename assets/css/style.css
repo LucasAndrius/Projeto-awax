@@ -97,7 +97,7 @@ header {
 .slider-width {
     height:100%;
     display:flex;
-    transition: all ease 0.6s;
+    transition: all 0.9s ease-in-out;
 }
 
 .slide--item{
